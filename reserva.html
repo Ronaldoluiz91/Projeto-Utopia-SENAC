@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Utopia [Página principal]</title>
+    <meta name="description" content="Projeto para o Utopia Bar">
+
+
+    <!--Buscando o css externo-->
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+</head>
+
+
+<body >
+    <header id="topo">
+        <div>
+            <h1>
+                <a id="logotipo" href="index.html"><img src="imagens/utopiaLogo-removebg-preview.png"
+                        alt="Logotipo"></a>
+            </h1>
+            <span id="iconMenu" class="material-symbols-outlined" onclick="clickMenu()">
+                menu
+            </span>
+
+            <nav id="itens">
+                <span id="iconClose" class="material-symbols-outlined" onclick="clickMenu()">
+                    close
+                </span>
+                <a href="index.html" tabindex="1">Home</a>
+                <!--tabindex é utilizado para a acessibilidade-->
+                <a href="cardapio.html" tabindex="2">Cardapio</a>
+                <a href="reserva.html" tabindex="3">Reserva</a>
+                <a href="contato.html" tabindex="4">Contato</a>
+                <a href="trabalheConosco.html" tabindex="5">Trabalhe Conosco</a>
+            </nav>
+        </div>
+    </header>
+
+
+    <div class="conteudo-reserva">
+
+        <div class="titulo-reserva">
+            <h3>Faça sua reserva</h3>
+        </div>
+
+        <form action="" id="form-reserva" method="post">
+
+
+            <label for="nome">Nome:</label>
+            <input tabindex="1" required type="text" id="nome" name="nome">
+
+
+            <label for="telefone">Whatsapp:</label>
+            <input tabindex="2" required type="text" id="telefone" name="telefone">
+
+
+            <label for="reserva">Tipo de reserva:</label>
+            <select name="reserva" id="reserva">
+                <option value=""></option>
+                <option value="">Salão Principal</option>
+                <option value="">Area Externa (churrasqueira)</option>
+                <option value="">Evento (mais de 30 pessoa)</option>
+            </select>
+
+
+            <label for="quantidade">Quantidade de pessoas:</label>
+            <select type="number" name="quantidade" id="quantidade">
+                <option value=""></option>
+                <option value="">1 pessoa</option>
+                <option value="">2 pessoas</option>
+                <option value="">3 pessoas</option>
+                <option value="">4 pessoas</option>
+                <option value="">5 pessoas</option>
+                <option value="">6 pessoas</option>
+                <option value="">7 pessoas</option>
+                <option value="">8 pessoas</option>
+                <option value="">9 pessoas</option>
+                <option value="">10 pessoas</option>
+            </select>
+
+            <p> <label>Data:</label>
+                <input type="date" id="data" name="data">
+            </p>
+            <label for="horario">Horario:</label>
+            <select type="times" name="horario" id="horario">
+                <option value=""></option>
+                <option value="">16:00 horas</option>
+                <option value="">17:00 horas</option>
+                <option value="">18:00 horas</option>
+                <option value="">19:00 horas</option>
+                <option value="">20:00 horas</option>
+                <option value="">21:00 horas</option>
+                <option value="">22:00 horas</option>
+            </select>
+
+            <button tabindex="11" id="reservar" name="enviar"> Reservars</button>
+        </form>
+
+    </div>
+
+    <!--MODAL-->
+    <div id="modal-container">
+        <span class="close-modal">&times;</span>
+        <p>Reserva efetuada com sucesso</p>
+    </div>
+
+  
+
+    <footer class="rodape">
+        <div class="endereco">
+            <div id="logo-rodape" class="footerColum">
+                <a href="index.html"><img src="imagens/utopiaLogo-removebg-preview.png" alt="Logotipo"></a>
+            </div>
+
+            <div>
+                <h1>Localização</h1>
+                <p>Rua Tito... Vila Romana</p>
+                <p>São Paulo - SP</p>
+                <hr>
+
+                <h1>Redes Sociais</h1>
+                <p>@utopiaBar</p>
+                <hr>
+            </div>
+
+            <div class="contato">
+                <h1>Telefone</h1>
+                <p>(11) 3902-....</p>
+                <h1>Whatsapp</h1>
+                <p>(11)99135-....</p>
+            </div>
+
+            <div class="funcionamento">
+                <hr>
+                <h1>Horário de Funcionamento</h1>
+                <p>Segunda a sexta: 12:00 as 22:00 horas</p>
+                <p>Sabado: 11:00 as 00:00 horas</p>
+                <p>Domingo 12:00 as 23:00 horas</p>
+                <hr>
+            </div>
+        </div>
+
+    </footer>
+
+    <div class="assinatura">
+        <p>Desenvolvido por <b>Ronaldo e Kennedy</b> Site acadêmico |
+            Todos os direitos reservados |
+            SENAC TITO &copy; 2024</p>
+    </div>
+    <script src="js/acoes.js"></script>
+</body>
+
+</html>

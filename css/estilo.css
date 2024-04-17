@@ -1,0 +1,1146 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+SC:ital,wght@0,400;0,500;0,700;0,800;0,900;1,400;1,500;1,700;1,800;1,900&family=Alegreya+Sans+SC:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&family=Oswald:wght@200..700&display=swap');
+/*FONTE DA APRESENTAÇÃO PAGINA INDEX */
+
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+SC:ital,wght@0,400;0,500;0,700;0,800;0,900;1,400;1,500;1,700;1,800;1,900&family=Alegreya+Sans+SC:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&display=swap');
+/* FONTE TITULA CARDAPIO PAGINA INDEX */
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+/* FONTE CARDS CARDAPIO */
+
+
+
+/*Criando regras utilizando o fluxo do MOBILE FIRST*/
+/*Regras gerais*/
+
+
+
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+
+}
+
+.conteudo {
+    width: 100%;
+}
+
+hr {
+    max-width: 150px;
+}
+
+img {
+    max-width: 100%;
+
+}
+
+/*Regras do Topo*/
+#topo {
+    position: fixed;
+    background-color: white;
+    /* height: 40px; */
+    background: linear-gradient(to left, #812b24, rgb(233, 189, 189));
+    position: relative;
+    bottom: 22px;
+    height: 40px;
+    margin-bottom: -20px;
+    z-index: 100;
+}
+
+h1 img {
+    width: 50px;
+    margin-bottom: 0px;
+    margin-left: 20px;
+}
+
+#iconMenu {
+    color: white;
+    cursor: pointer;
+    min-height: 40px;
+    display: flex;
+    overflow: hidden;
+    line-height: 40px;
+    padding-left: 1%;
+    font-size: 40px;
+    justify-content: end;
+    position: relative;
+    bottom: 70px;
+    display: inline;
+    margin-left: 85%;
+
+}
+
+#iconClose {
+    color: white;
+    cursor: pointer;
+    display: flex;
+    justify-content: end;
+    font-size: 40px;
+    padding-left: 1%;
+    display: inline;
+    margin-left: 85%;
+}
+
+
+#itens {
+    min-height: 40px;
+    font-weight: bold;
+    overflow: hidden;
+    line-height: 40px;
+    padding-left: 1%;
+    display: none;
+    position: relative;
+    bottom: 40px;
+    background-color: rgba(33, 33, 33, 0.901);
+
+}
+
+nav a:link,
+nav a:visited,
+#iconMenu:link,
+#iconMenu:visited {
+    text-decoration: none;
+    color: white;
+    transition: background-color 1s;
+    min-height: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    bottom: 15px;
+    font-family: "Oswald", sans-serif;
+}
+
+nav a:hover,
+nav a:focus,
+#iconMenu:hover,
+#iconMenu:focus {
+    color: white;
+    border-radius: 5%;
+}
+
+/*Regras para o FOOTER*/
+.rodape {
+    background-color: #812b24;
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: -15px;
+}
+
+.rodape p,
+li {
+    font-size: 16px;
+}
+
+.rodape img {
+    margin: 0 68px;
+}
+
+.rodape-conteudo {
+    padding: 15px;
+    color: #fff;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+
+}
+
+
+#logo-rodape {
+    min-width: 146px;
+    width: 150px;
+
+}
+
+.endereco {
+    color: white;
+
+
+}
+
+.endereco h1 {
+    color: #e7d0a2;
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    text-transform: uppercase;
+    font-size: 25px;
+
+}
+
+#logo-rodape img {
+    margin-top: 25px;
+    width: 100%;
+    max-width: 150px;
+}
+
+
+.assinatura {
+    color: #fff;
+    background-color: black;
+    text-align: center;
+    height: auto;
+    width: 100%;
+    margin-bottom: -16px;
+}
+
+
+
+.footerColum {
+    /* width: 30%; */
+    margin: 1%;
+
+}
+
+hr {
+    display: block;
+}
+
+/*Regras Para o Index (Conteudo)*/
+.frase {
+    background: linear-gradient(to left, #b7281bd5, rgb(233, 189, 189));
+    color: white;
+    text-align: center;
+    margin-top: -35px;
+    font-style: normal;
+    font-size: 10pt;
+}
+
+/*---------------------------CARROSEL / SLIDER --------------------------*/
+#img1Carrosel {
+    height: 250px;
+    width: 100%;
+}
+
+.slider {
+    max-width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.slides {
+    display: flex;
+    transition: transform 2s ease;
+
+}
+
+.slide {
+    flex: 0 0 100%;
+}
+
+
+
+/*--------------------TEXTO DE BEM VINDO DA PAGINA HOME---------------*/
+.bem-vindo {
+
+    text-align: center;
+
+
+}
+
+.text-Sejabemvindo {
+    font-size: 16px;
+}
+
+.bem-vindo img {
+    height: 200px;
+    width: 300px;
+    margin-bottom: -25px;
+
+
+}
+
+.bemVindoGeral {
+    margin-bottom: -11px;
+}
+
+.bem-vindo p {
+
+    text-align: center;
+}
+
+.bem-vindo h2 {
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    margin-top: 35px;
+    font-size: 18px;
+    text-transform: uppercase;
+    margin-top: -3%;
+}
+
+.texto1 {
+    max-width: 292px;
+}
+
+.cozinha1 {
+    display: flex;
+    /* gap: 0px; */
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+    /* margin-left: 92px; */
+}
+
+.galeria {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+
+}
+
+.galeria img {
+    width: 101px;
+    height: 85px;
+}
+
+
+
+.Cozinha img {
+    padding-bottom: 13px;
+}
+
+
+
+/*-------------------- CARDS DO CARDAPIO DA PAGINA HOME ---------------------*/
+
+
+.vejaCardapio {
+    text-align: center;
+    margin-bottom: 5px;
+    margin-top: 30px;
+    background-color: black;
+    color: white;
+    padding: 5px;
+}
+
+.vejaCardapio button {
+    background-color: #B06761;
+    color: white;
+    height: 30px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+button a {
+    text-decoration: none;
+    color: white;
+}
+
+.vejaCardapio img {
+    width: 100%;
+    height: 390px;
+    margin: 0px;
+}
+
+.vejaCardapio h1 {
+    font-size: 25px;
+    font-family: "Alegreya SC", serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+
+
+/*REGRAS PARA CARDAPIO (PAGINA CARDAPIO)*/
+.menu-cardapios {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.menu-cardapios h3 {
+    color: black;
+    margin: 10px;
+    text-align: center;
+    background: linear-gradient(to right, #f4d6d6, #f59a9a);
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: grey 1px 1px 6px;
+}
+
+.item-cardapios:hover {
+    filter: opacity(0.6);
+    transition: 2s;
+}
+
+.conteudo-cardapio {
+    background-color: #fbf1f1;
+    margin: 2px;
+    box-shadow: grey 1px 1px 5px;
+}
+
+.conteudo-cardapio h3 {
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 0px;
+    background-color: #B06761;
+    color: white;
+    padding: 5px;
+}
+
+.preço {
+    color: #B06761;
+}
+
+
+
+/*CARD CARDAPIO  PAGINA CARDAPIO*/
+.card-cardapio img {
+    width: 75px;
+    height: 70px;
+    border-radius: 5px;
+    margin: 0;
+}
+
+.card-cardapio {
+    display: flex;
+    align-items: center;
+    margin-bottom: 7px;
+    padding: 3px;
+    background-color: white;
+    text-align: justify;
+}
+
+.textTam {
+    width: 140px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.card-cardapio p {
+    max-width: 150px;
+}
+
+/*PAGINA CONTATO*/
+#form-contato {
+    margin: auto;
+    max-width: 700px;
+    width: 95%;
+    text-align: center;
+}
+
+#form-contato input,
+#form-contato textarea,
+#form-contato select {
+    border: solid 1px black;
+    width: 100%;
+    margin: 4px auto;
+}
+
+#form-contato input,
+#form-contato select {
+    height: 30px;
+}
+
+#form-contato label {
+    font-weight: bold;
+}
+
+.titulo-contato h3 {
+    text-align: center;
+    background-color: #B06761;
+    color: white;
+}
+
+#form-contato button {
+    background-color: #B06761;
+    color: white;
+    padding: 2%;
+    border-radius: 5px;
+    margin-top: 30px;
+    margin-bottom: 60px;
+}
+
+#form-contato button:hover,
+#form-contato button:focus {
+    cursor: pointer;
+}
+
+.conteudo-contato {
+    margin: 5%;
+    text-align: center;
+}
+
+/*Pagina reserva*/
+
+
+#forme-reserva {
+    margin: 5px;
+}
+
+
+#form-reserva input,
+#form-reserva select {
+    border: solid 1px black;
+    width: 92%;
+    margin: 4px auto;
+}
+
+#form-reserva input,
+#form-reserva select {
+    height: 30px;
+}
+
+#form-reserva label {
+    font-weight: bold;
+}
+
+.conteudo-reserva {
+    margin-left: 17%;
+    text-align: center;
+    background-color: #B06761;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    width: 65%;
+    color: white;
+}
+
+.conteudo-reserva button {
+    background-color: #B06761;
+    color: white;
+    padding: 2%;
+    border-radius: 5px;
+}
+
+
+
+#modal-container {
+    background-color: #ffffff;
+    color: black;
+    width: 60%;
+    height: 75px;
+    padding: 10px;
+    margin-left: 40px;
+    position: absolute;
+    margin-top: -476px;
+    font-weight: bold;
+    border-radius: 15px;
+    margin-left: 70px;
+    box-shadow: black 1px 1px 10px;
+    display: none;
+}
+
+#modal-container p {
+    margin-top: -5px;
+    margin-left: 25px;
+}
+
+
+.close-modal {
+    font-size: 35px;
+    margin-left: 90%;
+}
+
+
+
+
+
+
+
+/*confirme reserva*/
+.titulo-confirm-reserva {
+    text-align: center;
+}
+
+#confirm-reserva input,
+#confirm-reserva select {
+    border: solid 1px black;
+    width: 100%;
+    margin: 4px auto;
+}
+
+#confirm-reserva input,
+#confirm-reserva select {
+    height: 30px;
+}
+
+.confirm-reserva {
+    margin: 5%;
+}
+
+/*Pagina trabalhe conosco*/
+.trabalhe {
+    text-align: center;
+}
+
+.trabalhe h3 {
+    background-color: #B06761;
+    color: white;
+}
+
+.botao {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#form-trabalhe {
+    margin: auto;
+    max-width: 700px;
+    width: 95%;
+}
+
+#form-trabalhe input,
+#form-trabalhe textarea,
+#form-trabalhe select {
+    border: solid 1px black;
+    width: 100%;
+    margin: 4px auto;
+}
+
+#form-trabalhe input,
+#form-trabalhe select {
+    height: 30px;
+}
+
+#form-trabalhe label {
+    font-weight: bold;
+}
+
+#form-trabalhe p {
+    text-align: center;
+}
+
+#form-trabalhe button {
+    background-color: #B06761;
+    color: white;
+    padding: 2%;
+    border-radius: 5px;
+}
+
+
+/* começando a parte responsiva da pagina Index TABLET */
+@media screen and (min-width:767px) {
+
+    /*FOOTER PARA TABLET */
+
+    .rodape {
+        color: #7f7f80;
+        text-align: center;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .endereco {
+        display: flex;
+        align-items: center;
+        /* margin-top: 40px; */
+        display: flex;
+        gap: 50px;
+    }
+
+    .endereco h1 {
+        font-size: 15px;
+    }
+
+    .rodape p {
+        font-size: 13px;
+    }
+
+
+    .rodape-conteudo {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: row;
+        gap: 95px;
+    }
+
+    #logo-rodape img {
+        margin-left: 0px;
+        width: 100%;
+        max-width: 150px;
+    }
+
+
+
+    /* TOPO PARA TABLET */
+
+    #topo {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        height: 80px;
+    }
+
+    #itens {
+        display: block;
+        display: flex;
+        gap: 50px;
+        background-color: #ffffff00;
+        justify-content: flex-end;
+        margin-top: -36px;
+        margin-right: 55px;
+        height: 80px;
+    }
+
+    #iconMenu {
+        display: none;
+    }
+
+    #iconClose {
+        display: none;
+    }
+
+    #carrosel img {
+        margin-top: 81px;
+    }
+
+
+    /* MAIN PARA TABLET */
+
+    #img1Carrosel {
+        height: 400px;
+    }
+
+    .frase {
+        margin-top: -33px;
+    }
+
+    .bem-vindo {
+        padding: 10px;
+    }
+
+    .bem-vindo img {
+        height: 145px;
+        width: 216px;
+    }
+
+    .bem-vindo p {
+        font-size: 16px;
+        text-align: center;
+        margin-top: 25px;
+    }
+
+    .bem-vindo h2 {
+
+        font-family: "Oswald", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 600;
+        font-style: normal;
+        font-size: 35px;
+        margin-bottom: 25px;
+        text-transform: uppercase;
+
+    }
+
+    .vejaCardapio img {
+        width: 70%;
+    }
+
+    .vejaCardapio {
+        padding: 12px;
+
+    }
+
+    .vejaCardapio h1 {
+        font-size: 50px;
+    }
+
+    .vejaCardapio p {
+        font-size: 18px;
+        margin-top: 5px;
+    }
+
+    .card-bemvindo {
+        display: flex;
+        text-align: center;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card-bemvindo p {
+
+        text-align: center;
+    }
+
+    .Cozinha {
+        margin: -38px;
+        padding: 20px;
+    }
+
+    .cozinha1 {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        flex-wrap: nowrap;
+        margin-bottom: 45px;
+    }
+
+
+
+    .galeria {
+        display: flex;
+        /* gap: 36px; */
+        justify-content: center;
+        flex-wrap: wrap;
+        /* margin-top: -70px; */
+    }
+
+
+    .galeria img {
+        height: 158px;
+        width: 216px;
+        cursor: pointer;
+    }
+
+
+    .texto1 {
+        text-align: center;
+        max-width: 200px;
+        margin-top: -6px;
+        font-size: 10pt;
+        color: black;
+        font-style: italic;
+    }
+
+    /* FOOTER */
+
+    hr {
+        display: none;
+    }
+
+
+    /*PAGINA CARDAPIO TABLET */
+
+    .menu-cardapios {
+        margin-top: 90px;
+    }
+
+    .card-cardapio {
+        width: 368px;
+
+
+    }
+
+    .cardapio-t {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 11px;
+
+    }
+
+
+    /* PAGINA RESERVA PARA TABLET */
+
+    .conteudo-reserva {
+        margin-top: 15%;
+    }
+
+    /*MODAL */
+
+    #modal-container {
+        height: 117px;
+        margin-left: 35%;
+        margin-top: -420px;
+        width: 35%;
+    }
+
+    .close-modal {
+        margin-left: 95%;
+    }
+}
+
+
+/* TELA RESPONSIVA PARA DESKTOP */
+
+@media screen and (min-width:1200px) {
+
+    /* MENU DESKTOP */
+
+    #topo {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        height: 80px;
+
+
+    }
+
+    #itens {
+        display: block;
+        display: flex;
+        gap: 90px;
+        background-color: #ffffff00;
+        justify-content: flex-end;
+        margin-top: -36px;
+        margin-right: 55px;
+        height: 80px;
+    }
+
+    #iconMenu {
+        display: none;
+    }
+
+    #iconClose {
+        display: none;
+    }
+
+
+    /* FOOTER DESKTOP */
+
+    .endereco {
+        display: flex;
+        align-items: center;
+        /* margin-top: 40px; */
+        display: flex;
+        gap: 152px;
+        font-size: 30px;
+    }
+
+    .endereco h1 {
+        font-size: 30px;
+    }
+
+    .rodape-conteudo {
+        gap: 30px;
+    }
+
+
+    iframe {
+        height: 600px;
+    }
+
+
+
+    /* MAIN PARA DESKTOP */
+
+    .bemVindoGeral {
+        margin-top: 395px;
+    }
+
+    .bem-vindo img {
+        width: 425px;
+        height: 350px;
+    }
+
+    .bem-vindo h2 {
+        font-size: 65px;
+        margin-top: -20px;
+    }
+
+    .card-bemvindo p {
+        font-size: 30px;
+        width: 390px;
+        margin-left: -50px;
+    }
+
+
+    .bem-vindo p {
+        margin-bottom: 50px;
+        text-align: center;
+
+    }
+
+    .Cozinha {
+        display: flex;
+        justify-content: space-between;
+        margin: 2px;
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .Cozinha img {
+        width: 430px;
+        height: 370px;
+    }
+
+    .cozinha1 {
+        gap: 0px;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: nowrap;
+    }
+
+    .texto1 {
+        width: 345px;
+        margin-left: -110px;
+    }
+
+    .galeria img {
+        width: 400px;
+        height: 250px;
+    }
+
+    .vejaCardapio h1 {
+        font-size: 70px;
+        font-family: "Alegreya SC", serif;
+        font-weight: 700;
+        font-style: normal;
+        margin: 0px;
+    }
+
+    .vejaCardapio img {
+        width: 55%;
+        height: 680px;
+    }
+
+    #carrosel {
+        margin-top: 42px;
+        margin-left: 0px;
+        height: 517px;
+        text-align: center;
+        width: 100%;
+        background: linear-gradient(to top, #f4b7b1, #f0e1df);
+    }
+
+    #carrosel img {
+        width: 100%;
+        height: 860px;
+        margin-top: 40px;
+
+    }
+
+    .frase {
+        margin-top: -27px;
+    }
+
+
+    /*PAGINA CARDAPIO PARA DESKTOP*/
+
+    .cardapio-t {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 0px;
+    }
+
+    /* .card-cardapio {
+        width: 941px;
+        height: 170px;
+        gap: 80px;
+    } */
+
+    .card-cardapio img {
+        width: 195px;
+        height: 170px;
+
+    }
+
+    .card-cardapio p {
+        max-width: 150px;
+        font-family: 'open sans';
+
+    }
+
+    .conteudo-cardapio {
+        margin: 2px;
+    }
+
+    .conteudo-cardapio h3 {
+        font-family: "Alegreya SC";
+        font-weight: 600;
+        background: linear-gradient(to left, #812b24, rgb(233, 189, 189));
+        margin-bottom: 9px;
+    }
+
+    .menu-cardapios h3 {
+        font-family: 'Open Sans';
+    }
+
+    .textTam {
+        width: 145px;
+        margin: 0 auto;
+        text-align: left;
+        font-family: 'Open Sans';
+        font-weight: 500;
+        font-size: larger;
+    }
+
+    .preço {
+        color: #B06761;
+        font-style: italic;
+        font-size: larger;
+    }
+
+
+
+    /* PAGINA RESERVA PARA DESKTOP */
+
+    #form-reserva {
+        max-width: 700px;
+        margin: auto;
+    }
+
+    .conteudo-reserva {
+        margin-top: 10%;
+        margin-bottom: 10%;
+    }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width:1024PX) {
+    
+    .card-cardapio {
+        width: 497px;
+    }
+
+    .cardapio-t{
+        gap: 2PX;
+    }
+    }
+
+
+
+
+
+/*CARDS DA PAGINA CARDAPIO  NOTEBOOK */
+
+@media screen and (min-width:1410PX) {
+
+    .card-cardapio {
+        width: 700px;
+        height: 170px;
+        gap: 80px;
+    }
+}
+
+
+
+/*CARDS DA PAGINA CARDAPIO  DESKTOP TELA MAIOR */
+@media screen and (min-width:1910PX) {
+
+    .card-cardapio {
+        width: 940px;
+        height: 170px;
+        gap: 80px;
+    }
+}
+
+
+@media screen and (min-width:2550PX) {
+
+    .card-cardapio {
+        width: 1265px;
+        height: 170px;
+        gap: 80px;
+    }
+}
