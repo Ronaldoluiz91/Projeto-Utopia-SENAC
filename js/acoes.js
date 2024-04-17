@@ -100,41 +100,67 @@ setInterval(nextSlide, intervalTime);
 //Modal pagina reserva 
 
 var modal = document.getElementById("modal-container"); //modal
-var btnReserva = document.getElementById("reservar"); //botão enviar reserva
+//var btnReserva = document.getElementById("reservar"); //botão enviar reserva
 var span = document.getElementsByClassName("close")[0]; //botao fechar modal
-
-
-
-
-
-btnReserva.onclick = function () {
-    var nome = document.getElementById('nome').value;
-    var telefone =document.getElementById('telefone').value;
+var nome = document.getElementById('nome').value;
+    var telefone = document.getElementById('telefone').value;
     var reserva = document.getElementById('reserva').value;
     var quantidade = document.getElementById('quantidade').value;
     var data = document.getElementById('data').value;
     var horario = document.getElementById('horario').value;
 
 
-    if (nome || telefone || reserva || quantidade || data || horario !== '') {
-        modal.style.display = "block";
+
+function enviar(){
+    alert("funcionou!")
+    alert(nome)
+    
+
+
+    if (nome ==="" || telefone ==="" || reserva ==="" || quantidade ==="" || data==="" || horario ==="") {
+        alert('preencha todos os campos')
+        // modal.style.display = "block";
     }
 
     else {
-        alert('preencha todos os campos')
+        // alert('preencha todos os campos')
+        modal.style.display = "block";
     }
-
     span.onclick = function () {
         modal.style.display = "none";
     }
-}
-
-
-window.onclick = function (event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
     }
-}
+
+
+
+// btnReserva.onclick = function () {
+//     var nome = document.getElementById('nome').value;
+//     var telefone = document.getElementById('telefone').value;
+//     var reserva = document.getElementById('reserva').value;
+//     var quantidade = document.getElementById('quantidade').value;
+//     var data = document.getElementById('data').value;
+//     var horario = document.getElementById('horario').value;
+
+
+//     if (nome || telefone || reserva || quantidade || data || horario !== '') {
+//         modal.style.display = "block";
+//     }
+
+//     else {
+//         alert('preencha todos os campos')
+//     }
+
+//     span.onclick = function () {
+//         modal.style.display = "none";
+//     }
+// }
+
+
+// window.onclick = function (event) {
+//     if (event.target == modal) {
+//         modal.style.display = "none";
+//     }
+// }
 
 
 

@@ -499,13 +499,17 @@ button a {
     font-weight: bold;
 }
 
+.conteudo-reserva-pai{
+    display: flex;
+    justify-content: center;
+    margin: 5%;
+}
+
 .conteudo-reserva {
-    margin-left: 17%;
     text-align: center;
     background-color: #B06761;
     border-radius: 15px;
-    margin-bottom: 20px;
-    width: 65%;
+    width: 100%;
     color: white;
 }
 
@@ -841,6 +845,7 @@ button a {
 
     .conteudo-reserva {
         margin-top: 15%;
+        width: 70%;
     }
 
     /*MODAL */
@@ -1071,20 +1076,32 @@ button a {
 
 
 
-    /* PAGINA RESERVA PARA DESKTOP */
+    /* PAGINA RESERVA PARA NOTEBOOK */
 
     #form-reserva {
-        max-width: 700px;
+        max-width: 60%;
         margin: auto;
     }
 
     .conteudo-reserva {
         margin-top: 10%;
         margin-bottom: 10%;
+        width: 67%;
+    }
+}
+
+    /* PAGINA RESERVA PARA DESKTOP TELA MAIOR */
+
+    .conteudo-reserva {
+        margin-top: 10%;
+        margin-bottom: 10%;
+        width: 47%;
     }
 
 
-}
+
+
+
 
 
 
