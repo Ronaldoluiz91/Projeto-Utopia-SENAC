@@ -28,6 +28,7 @@ body {
 
 .conteudo {
     width: 100%;
+    font-family: 'open sans';
 }
 
 hr {
@@ -113,7 +114,7 @@ nav a:visited,
     align-items: center;
     position: relative;
     bottom: 15px;
-    font-family: "Oswald", sans-serif;
+    font-family: "open sans", sans-serif;
 }
 
 nav a:hover,
