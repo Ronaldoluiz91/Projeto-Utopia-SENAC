@@ -499,7 +499,7 @@ button a {
     font-weight: bold;
 }
 
-.conteudo-reserva-pai{
+.conteudo-reserva-pai {
     display: flex;
     justify-content: center;
     margin: 5%;
@@ -1076,7 +1076,7 @@ button a {
 
 
 
-    /* PAGINA RESERVA PARA NOTEBOOK */
+    /* PAGINA RESERVA PARA DESKTOP */
 
     #form-reserva {
         max-width: 60%;
@@ -1088,15 +1088,49 @@ button a {
         margin-bottom: 10%;
         width: 67%;
     }
+
+    /* #modal-container{
+        height: 117px;
+        /* margin-left: 35%; */
+    /* margin-top: 290px; */
+    /* width: 40%; */
+    /* } */
+
+
+    #status {
+        display: none;
+    }
+
+    .modal-relatorio {
+        margin-top: 240px;
+        background-color: white;
+        height: 260px;
+        width: 370px;
+        border-radius: 10px;
+        box-shadow: black 1px 1px 5px;
+        /* position: absolute;
+        display: none; */
+        margin-left: 100px;
+        padding: 30px;
+    }
+
+    /* .relatorio1{
+        display: none;
+    } */
+
+    .relatorioReserva {
+        margin-top: -237px;
+        margin-left: 200px;
+    }
 }
 
-    /* PAGINA RESERVA PARA DESKTOP TELA MAIOR */
+/* PAGINA RESERVA PARA DESKTOP TELA MAIOR */
 
-    .conteudo-reserva {
-        margin-top: 10%;
-        margin-bottom: 10%;
-        width: 47%;
-    }
+.conteudo-reserva {
+    margin-top: 10%;
+    margin-bottom: 10%;
+    width: 47%;
+}
 
 
 
@@ -1115,15 +1149,15 @@ button a {
 
 
 @media screen and (min-width:1024PX) {
-    
+
     .card-cardapio {
         width: 497px;
     }
 
-    .cardapio-t{
+    .cardapio-t {
         gap: 2PX;
     }
-    }
+}
 
 
 

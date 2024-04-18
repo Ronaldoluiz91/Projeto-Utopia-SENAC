@@ -47,36 +47,41 @@
 
     <div class="conteudo-reserva-pai">
         <div class="conteudo-reserva">
-            <p >TEste</p>
+
             <div class="titulo-reserva">
                 <h3>Faça sua reserva</h3>
             </div>
 
-            <form action="" id="form-reserva" method="post">
+            <form id="form-reserva" method="post">
 
 
-                <label for="nome">Nome:</label>
-                <input tabindex="1"  type="text" id="nome" name="nome">
+                <!-- <label for="nome">Nome:</label> -->
+
+                <p>Nome</p>
+                <input tabindex="1" type="text" id="nomeReserva" name="nomeReserva">
 
 
-                <label for="telefone">Whatsapp:</label>
-                <input tabindex="2" type="text" id="telefone" name="telefone">
+                <!-- <label for="telefone">Whatsapp:</label> -->
+                <p>Whatsapp</p>
+                <input tabindex="2" type="text" id="telefoneReserva" name="telefoneReserva">
 
 
-                <label for="reserva">Tipo de reserva:</label>
+                <!-- <label for="reserva">Tipo de reserva:</label> -->
+                <p>Tipo de Reserva:</p>
                 <select name="reserva" id="reserva">
                     <option value=""></option>
-                    <option value="">Salão Principal</option>
+                    <option value="Salão Principal">Salão Principal</option>
                     <option value="">Area Externa (churrasqueira)</option>
                     <option value="">Evento (mais de 30 pessoa)</option>
                 </select>
 
 
-                <label for="quantidade">Quantidade de pessoas:</label>
+                <!-- <label for="quantidade">Quantidade de pessoas:</label> -->
+                <p>Quantidade de Pessoas:</p>
                 <select type="number" name="quantidade" id="quantidade">
                     <option value=""></option>
                     <option value="">1 pessoa</option>
-                    <option value="">2 pessoas</option>
+                    <option value="2">2 pessoas</option>
                     <option value="">3 pessoas</option>
                     <option value="">4 pessoas</option>
                     <option value="">5 pessoas</option>
@@ -87,11 +92,14 @@
                     <option value="">10 pessoas</option>
                 </select>
 
-                <p> <label>Data:</label>
-                    <input type="date" id="data" name="data">
-                </p>
-                <label for="horario">Horario:</label>
-                <select type="times" name="horario" id="horario">
+                <!-- <p> <label>Data:</label> -->
+                <p>Data</p>
+                <input type="date" id="dataReserva" name="dataReserva">
+
+                <!-- <label for="horario">Horario:</label> -->
+
+                <p>Horario:</p>
+                <select type="times" name="horario" id="horarioReserva">
                     <option value=""></option>
                     <option value="">16:00 horas</option>
                     <option value="17:00 horas">17:00 horas</option>
@@ -101,17 +109,37 @@
                     <option value="">21:00 horas</option>
                     <option value="">22:00 horas</option>
                 </select>
-<div tabindex="11" id="reservar" name="enviar" onclick="enviar()"> Reservar</div>
+                <div tabindex="11" id="reservar" name="enviar" onclick="enviar()"> Reservar</div>
                 <!-- <button tabindex="11" id="reservar" name="enviar" onclick="enviar()"> Reservar</button> -->
             </form>
 
         </div>
 
+        <div class="modal-relatorio">
+            <p class="relatorio1">Nome</p>
+            <p class="relatorio1">Whatsapp</p>
+            <p class="relatorio1">Tipo de Reserva:</p>
+            <p class="relatorio1">Quantidade de Pessoas:</p>
+            <p class="relatorio1">Data:</p>
+            <p class="relatorio1">Horario</p>
+            <p class="relatorio1">Status:</p>
+
+            <div class="relatorioReserva">
+                <p id="reservaRelatorio"></p>
+                <p id="telRelatorio"></p>
+                <p id="tipoRelatorio"></p>
+                <p id="quantRelatorio"></p>
+                <p id="dataRelatorio"></p>
+                <p id="horaRelatorio"></p>
+                <p id="status">Reserva confirmada</p>
+            </div>
+        </div>
+
         <!--MODAL-->
-        <div id="modal-container">
+        <!-- <div id="modal-container">
             <span class="close-modal">&times;</span>
             <p>Reserva efetuada com sucesso</p>
-        </div>
+        </div> -->
 
     </div>
 

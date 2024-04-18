@@ -72,25 +72,98 @@ function slide5() {
 
 // slider- cardapio pagina index
 
-var slides = document.querySelector('.slides');
-var slide = document.querySelectorAll('.slide');
-var intervalTime = 3000; // Tempo de troca de slide
-var slideIndex = 0;
+// var slides = document.querySelector('.slides');
+// var slide = document.querySelectorAll('.slide');
+// var intervalTime = 3000; // Tempo de troca de slide
+// var slideIndex = 0;
 
-var nextSlide = () => {
-    slideIndex++;
-    if (slideIndex === slide.length) {
-        slideIndex = 0;
-    }
-    updateSlide();
+// var nextSlide = () => {
+//     slideIndex++;
+//     if (slideIndex === slide.length) {
+//         slideIndex = 0;
+//     }
+//     updateSlide();
+// }
+
+// var updateSlide = () => {
+//     slides.style.transform = `translateX(-${slideIndex * 100}%)`;
+// }
+
+// setInterval(nextSlide, intervalTime);
+
+
+
+
+
+//pagina reserva
+
+// var modalRelatorio = document.getElementById('modal-relatorio')
+
+
+function enviar(){
+
+    var modalRelatorio = document.getElementById('modal-relatorio')
+
+alert('funcionou')
+
+var nome = document.getElementById('nomeReserva').value;
+var telefone = document.getElementById('telefoneReserva').value;
+var reserva = document.getElementById('reserva').value;
+var quantidade = document.getElementById('quantidade').value;
+var horario = document.getElementById('horarioReserva').value;
+var status = document.getElementById('status')
+// var relatorio1 = document.getElementsByClassName('relatorio1')
+
+
+
+// var inputData = document.getElementById('dataReserva')
+// // var data = new Date();
+// // var dia = data.getDate();
+// // var mes =data.getMonth()+1; //é preciso incrementar uma posição para dar um, get na lista correta.
+// // var ano = data.getFullYear();
+
+// var dataReserva = this.value;
+
+var inputDate = document.getElementById('dataReserva');
+
+// Adicionando um ouvinte de evento 'change' para capturar a mudança de valor
+inputDate.addEventListener('change', function() {
+    // Obtendo o valor do input
+    var dataReserva = this.value;
+})
+
+
+    if (nome === "" || telefone === "" || reserva === "" || quantidade === "" || dataReserva === "" || horario === "") {
+        alert('preencha todos os campos')
+}
+else{
+    document.getElementById('reservaRelatorio').innerHTML = nome
+    document.getElementById('telRelatorio').innerHTML = telefone
+    document.getElementById('tipoRelatorio').innerHTML = reserva
+    document.getElementById('quantRelatorio').innerHTML = quantidade
+    document.getElementById('dataRelatorio').innerHTML = dataReserva.value
+    document.getElementById('horaRelatorio').innerHTML = horario
+
+    status.style.display ='block'
+    // relatorio1.style.display ='block'
+
+
+    
 }
 
-var updateSlide = () => {
-    slides.style.transform = `translateX(-${slideIndex * 100}%)`;
+
+
+// if (modalRelatorio.style.display ==='none'){
+//     modalRelatorio.style.display ='block'
+// }
+// else{
+//     modalRelatorio.style.display ='none'
+// }
+
+
+
+
 }
-
-setInterval(nextSlide, intervalTime);
-
 
 
 
@@ -99,37 +172,45 @@ setInterval(nextSlide, intervalTime);
 
 //Modal pagina reserva 
 
-var modal = document.getElementById("modal-container"); //modal
-//var btnReserva = document.getElementById("reservar"); //botão enviar reserva
-var span = document.getElementsByClassName("close")[0]; //botao fechar modal
-var nome = document.getElementById('nome').value;
-    var telefone = document.getElementById('telefone').value;
-    var reserva = document.getElementById('reserva').value;
-    var quantidade = document.getElementById('quantidade').value;
-    var data = document.getElementById('data').value;
-    var horario = document.getElementById('horario').value;
+// var modal = document.getElementById("modal-container"); //modal
+// //var btnReserva = document.getElementById("reservar"); //botão enviar reserva
+
+// var span = document.getElementsByClassName("close"); //botao fechar modal
 
 
+// var nome = document.getElementById('nomeReserva');
+// var telefone = document.getElementById('telefoneReserva');
+// var reserva = document.getElementById('reserva');
+// var quantidade = document.getElementById('quantidade');
+// var data = document.getElementById('data');
+// var horario = document.getElementById('horario');
 
-function enviar(){
-    alert("funcionou!")
-    alert(nome)
+
+// function enviar() {
+ 
     
+//     if (nome === "" || telefone === "" || reserva === "" || quantidade === "" || data === "" || horario === "") {
+//         alert('preencha todos os campos')
+//         // modal.style.display = "block";
+//     }
+
+//     else {
+//         // alert('preencha todos os campos')
+//         modal.style.display = "block";
+//     }
 
 
-    if (nome ==="" || telefone ==="" || reserva ==="" || quantidade ==="" || data==="" || horario ==="") {
-        alert('preencha todos os campos')
-        // modal.style.display = "block";
-    }
+//     // span.onclick = function () {
+//     //             modal.style.display = "none";
+//     //         }
 
-    else {
-        // alert('preencha todos os campos')
-        modal.style.display = "block";
-    }
-    span.onclick = function () {
-        modal.style.display = "none";
-    }
-    }
+//     window.onclick = function (event) {
+//     if (event.target == modal) {
+//         modal.style.display = "none";
+//     }
+// }
+
+// }
 
 
 
