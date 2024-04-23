@@ -4,12 +4,13 @@
 /*FONTE DA APRESENTAÇÃO PAGINA INDEX */
 
 @import url('https://fonts.googleapis.com/css2?family=Alegreya+SC:ital,wght@0,400;0,500;0,700;0,800;0,900;1,400;1,500;1,700;1,800;1,900&family=Alegreya+Sans+SC:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&display=swap');
-/* FONTE TITULA CARDAPIO PAGINA INDEX */
+/* FONTE TITULO CARDAPIO PAGINA INDEX */
 
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+/*FONTE DOS TITULOS DO FOOTER */
 
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
-/* FONTE CARDS CARDAPIO */
+/*FONTE CARDS CARDAPIO
 
 
 
@@ -28,12 +29,8 @@ body {
 
 .conteudo {
     width: 100%;
-    font-family: 'open sans';
 }
 
-hr {
-    max-width: 150px;
-}
 
 img {
     max-width: 100%;
@@ -115,6 +112,7 @@ nav a:visited,
     position: relative;
     bottom: 15px;
     font-family: "open sans", sans-serif;
+
 }
 
 nav a:hover,
@@ -136,10 +134,7 @@ nav a:focus,
     margin-bottom: -15px;
 }
 
-.rodape p,
-li {
-    font-size: 16px;
-}
+
 
 .rodape img {
     margin: 0 68px;
@@ -211,16 +206,37 @@ hr {
     background: linear-gradient(to left, #b7281bd5, rgb(233, 189, 189));
     color: white;
     text-align: center;
-    margin-top: -35px;
+    margin-top: -34px;
     font-style: normal;
-    font-size: 10pt;
+    font-size: 11px;
+    font-family: 'Alegreya SC';
+    
 }
 
-/*---------------------------CARROSEL / SLIDER --------------------------*/
-#img1Carrosel {
-    height: 250px;
-    width: 100%;
+/*---------------------------CARROSEL / SLIDER  da pagina home--------------------------*/
+
+
+
+.carousel-container {
+    position: relative;
 }
+
+.carousel-img {
+    width: 100%;
+    height: 250px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: opacity 5s ease-in-out;
+}
+
+.hidden {
+    opacity: 0;
+    height: 250px;
+}
+
+
+/*SLIDER DE CARDAPIO DA PAGINA HOME */
 
 .slider {
     max-width: 100%;
@@ -254,8 +270,8 @@ hr {
 }
 
 .bem-vindo img {
-    height: 200px;
-    width: 300px;
+    height: 260px;
+    width: 380px;
     margin-bottom: -25px;
 
 
@@ -263,6 +279,7 @@ hr {
 
 .bemVindoGeral {
     margin-bottom: -11px;
+    margin-top: 266px;
 }
 
 .bem-vindo p {
@@ -281,22 +298,23 @@ hr {
     margin-top: -3%;
 }
 
+
 .texto1 {
-    max-width: 292px;
+    max-width: 375px;
 }
 
 .cozinha1 {
     display: flex;
-    /* gap: 0px; */
+    gap: 15px;
     justify-content: center;
     flex-wrap: wrap;
-    margin-bottom: 15px;
+    margin-bottom: 50px;
     /* margin-left: 92px; */
 }
 
 .galeria {
     display: flex;
-    gap: 30px;
+    gap: 5px;
     justify-content: center;
     flex-wrap: wrap;
     margin-bottom: 50px;
@@ -304,8 +322,8 @@ hr {
 }
 
 .galeria img {
-    width: 101px;
-    height: 85px;
+    width: 115px;
+    height: 120px;
 }
 
 
@@ -357,12 +375,12 @@ button a {
 
 
 /*REGRAS PARA CARDAPIO (PAGINA CARDAPIO)*/
-.menu-cardapios {
+/* .menu-cardapios {
     display: flex;
     align-items: center;
     justify-content: space-around;
-}
-
+} */
+/* 
 .menu-cardapios h3 {
     color: black;
     margin: 10px;
@@ -371,6 +389,25 @@ button a {
     border-radius: 5px;
     padding: 10px;
     box-shadow: grey 1px 1px 6px;
+} */
+
+
+.menu-cardap{
+text-align: center;
+    background-color: black;
+    color: white;
+    text-transform: uppercase;
+    padding: 2px;
+    
+    
+}
+.menu-cardap a{
+    text-decoration: none;
+    color: white;
+}
+
+.menu-cardap hr{
+    width: 100%;
 }
 
 .item-cardapios:hover {
@@ -432,14 +469,21 @@ button a {
     max-width: 700px;
     width: 95%;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 #form-contato input,
-#form-contato textarea,
-#form-contato select {
+#form-contato textarea
+/* #form-contato select */ { 
     border: solid 1px black;
     width: 100%;
     margin: 4px auto;
+}
+
+#form-contato select {
+    width: 300px;
 }
 
 #form-contato input,
@@ -453,36 +497,80 @@ button a {
 
 .titulo-contato h3 {
     text-align: center;
-    background-color: #B06761;
-    color: white;
+    color: black;
+    margin-top: 15px;
+    margin-bottom: 0px;
 }
 
-#form-contato button {
-    background-color: #B06761;
-    color: white;
-    padding: 2%;
-    border-radius: 5px;
-    margin-top: 30px;
-    margin-bottom: 60px;
-}
-
-#form-contato button:hover,
-#form-contato button:focus {
-    cursor: pointer;
-}
 
 .conteudo-contato {
     margin: 5%;
     text-align: center;
+    background-color: #f0e1df;
+    border-radius: 15px;
+    padding: 2%;
 }
+
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5);
+  }
+  
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+  }
+  
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  #enviarContato{
+    background-color: #812b24;
+    width: 116px;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    /* align-content: center; */
+    justify-content: center;
+    color: white;
+    cursor: pointer;
+    
+  }  
+
+
 
 /*Pagina reserva*/
 
-
-#forme-reserva {
+#form-reserva {
     margin: 5px;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-
 
 #form-reserva input,
 #form-reserva select {
@@ -496,48 +584,124 @@ button a {
     height: 30px;
 }
 
-#form-reserva label {
-    font-weight: bold;
+#form-reserva p {
+    margin-bottom: auto;
 }
 
 .conteudo-reserva-pai {
-    display: flex;
     justify-content: center;
-    margin: 5%;
+    margin: 3%;
+    display: flex;
 }
 
 .conteudo-reserva {
     text-align: center;
-    background-color: #B06761;
+    background-color: #f0e1df;
     border-radius: 15px;
     width: 100%;
-    color: white;
+    color: black;
 }
 
-.conteudo-reserva button {
+#reservar {
+    box-shadow: black 1px 1px 2px;
+    border: black;
+    padding: 10px;
+    width: 80px;
+    /* margin-left: 140px; */
+    margin-top: 15px;
+    background-color: white;
+    color: black;
+    border-radius: 55px;
+    cursor: pointer;
+}
+
+#reservar:hover{
     background-color: #B06761;
     color: white;
-    padding: 2%;
-    border-radius: 5px;
 }
 
+.loading {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 10px solid #f3f3f3;
+    border-top: 10px solid #812b24;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+    z-index: 9999; /* Certifique-se de que o loading está acima de outros elementos */
+    display: none; /* Inicialmente oculto */
+  }
+  
+  /* Animação de rotação */
+  @keyframes spin {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    100% { transform: translate(-50%, -50%) rotate(360deg); }
+  }
+  
 
 
-#modal-container {
-    background-color: #ffffff;
-    color: black;
-    width: 60%;
-    height: 75px;
-    padding: 10px;
-    margin-left: 40px;
+
+  /*Modal da pagina reserva */
+
+#closeModal {
+    margin-left: 90%;
+    cursor: pointer;
+}
+
+#modal-relatorio {
+    margin-top: 120px;
+    background-color: white;
+    /* height: 260px; */
+    /* width: 60%; */
+    border-radius: 10px;
     position: absolute;
-    margin-top: -476px;
-    font-weight: bold;
-    border-radius: 15px;
-    margin-left: 70px;
-    box-shadow: black 1px 1px 10px;
+    /* margin-left: 28px; */
+    padding: 2%;
     display: none;
+    border: solid black 1px;
 }
+
+.modal-geral {
+    display: flex;
+    /* margin-top: 50px; */
+    margin-left: 5px;
+    gap: 41px;
+    
+}
+
+
+.modal1 img {
+    width: 110px;
+    height: 100px;
+    margin-top: -15px;
+}
+
+.tituloModal {
+    display: flex;
+    align-items: flex-end;
+    margin-left: 5px;
+    gap: 50px;
+}
+
+
+.relatorio1 {
+    font-size: 10px;
+}
+
+.relatorioReserva {
+    font-size: 10px;
+
+}
+
+#status {
+    color: green;
+    font-weight: bold;
+}
+
+
 
 #modal-container p {
     margin-top: -5px;
@@ -551,31 +715,44 @@ button a {
 }
 
 
-
-
-
-
-
-/*confirme reserva*/
-.titulo-confirm-reserva {
-    text-align: center;
-}
-
-#confirm-reserva input,
-#confirm-reserva select {
-    border: solid 1px black;
+/* Estilos para o modal preencha todos os campos */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
     width: 100%;
-    margin: 4px auto;
-}
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5);
+  }
+  
+  /* Modal preencha todos os campos */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 60%;
+  }
+  
+  /* Estilos para o botão de fechar */
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
 
-#confirm-reserva input,
-#confirm-reserva select {
-    height: 30px;
-}
-
-.confirm-reserva {
-    margin: 5%;
-}
 
 /*Pagina trabalhe conosco*/
 .trabalhe {
@@ -656,6 +833,7 @@ button a {
 
     .rodape p {
         font-size: 13px;
+        font-family: "open sans";
     }
 
 
@@ -683,6 +861,7 @@ button a {
         width: 100%;
         height: 80px;
     }
+    
 
     #itens {
         display: block;
@@ -714,8 +893,22 @@ button a {
         height: 400px;
     }
 
+
+    .carousel-img {
+        height: 440px;
+    }
+
+
+    #imgContainer {
+        margin-top: 81px;
+    }
+
+    .bemVindoGeral{
+        margin-top: 422px;
+    }
+
     .frase {
-        margin-top: -33px;
+        margin-top: 0px;
     }
 
     .bem-vindo {
@@ -740,7 +933,7 @@ button a {
         font-weight: 600;
         font-style: normal;
         font-size: 35px;
-        margin-bottom: 25px;
+        margin-bottom: 5px;
         text-transform: uppercase;
 
     }
@@ -776,17 +969,19 @@ button a {
     }
 
     .Cozinha {
-        margin: -38px;
+        /* margin: -38px; */
         padding: 20px;
     }
 
     .cozinha1 {
         display: flex;
-        justify-content: center;
-        gap: 15px;
+        justify-content: space-around;
+        /* gap: 30px; */
         flex-wrap: nowrap;
         margin-bottom: 45px;
     }
+
+    
 
 
 
@@ -824,8 +1019,28 @@ button a {
 
     /*PAGINA CARDAPIO TABLET */
 
-    .menu-cardapios {
+    /* .menu-cardapios {
         margin-top: 90px;
+    } */
+
+    .menu-cardap{
+      
+        display: flex;
+        margin-top: 126px;
+        height: 50px;
+    }
+
+    .menu-cardap a{
+
+        margin: auto;
+    margin-bottom: 0px;
+    margin-top: 18px;
+    font-size: 13px;
+        
+    }
+
+    .menu-cardap hr{
+        display: none;
     }
 
     .card-cardapio {
@@ -841,27 +1056,71 @@ button a {
 
     }
 
+    .conteudo-cardapio h3{
+        margin-top: 0px;
+    }
+
 
     /* PAGINA RESERVA PARA TABLET */
 
     .conteudo-reserva {
-        margin-top: 15%;
-        width: 70%;
+        margin-top: 8%;
+        width: 50%;
     }
 
     /*MODAL */
 
-    #modal-container {
-        height: 117px;
-        margin-left: 35%;
-        margin-top: -420px;
-        width: 35%;
+    #closeModal {
+        margin-left: 95%;
+        cursor: pointer;
     }
+
+    #modal-relatorio {
+        margin-top: 213px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        display: none;
+        width: 45%;
+    }
+
+    .modal-geral {
+        /* margin-left: 80px;
+        gap: 35px; */
+    }
+
+    .tituloModal {
+        gap: 110px;
+    }
+
+    .tituloModal h4 {
+        font-size: 20px;
+    }
+
+
+    .relatorio1 {
+        font-size: 16px;
+    }
+
+    .relatorioReserva {
+        font-size: 16px;
+    }
+
 
     .close-modal {
         margin-left: 95%;
     }
+
+
+    /*pagina contato */
+
+    .titulo-contato h3{
+        margin-top: 115px;
+    }
 }
+
+
+
 
 
 /* TELA RESPONSIVA PARA DESKTOP */
@@ -916,6 +1175,14 @@ button a {
 
     .rodape-conteudo {
         gap: 30px;
+    }
+
+    .rodape p{
+        font-size: 15px;
+    }
+
+    .locali{
+        width: 189px;
     }
 
 
@@ -997,7 +1264,7 @@ button a {
         height: 680px;
     }
 
-    #carrosel {
+    /* #carrosel {
         margin-top: 42px;
         margin-left: 0px;
         height: 517px;
@@ -1011,14 +1278,29 @@ button a {
         height: 860px;
         margin-top: 40px;
 
+    } */
+
+
+    .carousel-img{
+        height: 800px;
+    }
+
+    .bemVindoGeral{
+        margin-top: 810px;
     }
 
     .frase {
         margin-top: -27px;
+        font-size: 30px;
     }
 
 
     /*PAGINA CARDAPIO PARA DESKTOP*/
+
+
+    .menu-cardap a {
+        font-size: 20px;
+    }
 
     .cardapio-t {
         display: flex;
@@ -1026,12 +1308,6 @@ button a {
         justify-content: space-between;
         gap: 0px;
     }
-
-    /* .card-cardapio {
-        width: 941px;
-        height: 170px;
-        gap: 80px;
-    } */
 
     .card-cardapio img {
         width: 195px;
@@ -1056,10 +1332,6 @@ button a {
         margin-bottom: 9px;
     }
 
-    .menu-cardapios h3 {
-        font-family: 'Open Sans';
-    }
-
     .textTam {
         width: 145px;
         margin: 0 auto;
@@ -1079,75 +1351,79 @@ button a {
 
     /* PAGINA RESERVA PARA DESKTOP */
 
-    #form-reserva {
-        max-width: 60%;
-        margin: auto;
+
+    #form-reserva input , #form-reserva select{
+        width: 65%;
     }
+
+
 
     .conteudo-reserva {
-        margin-top: 10%;
-        margin-bottom: 10%;
-        width: 67%;
+        margin-top: 5%;
+        width: 800px;
+        height: 650PX;
     }
-
-    /* #modal-container{
-        height: 117px;
-        /* margin-left: 35%; */
-    /* margin-top: 290px; */
-    /* width: 40%; */
-    /* } */
-
 
     #status {
         display: none;
     }
 
-    .modal-relatorio {
-        margin-top: 240px;
-        background-color: white;
-        height: 260px;
-        width: 370px;
-        border-radius: 10px;
-        box-shadow: black 1px 1px 5px;
-        /* position: absolute;
-        display: none; */
-        margin-left: 100px;
-        padding: 30px;
+
+    #modal-relatorio {
+        margin-top: 75px;
+        margin-left: 0%;
+        width: 460px;
+        
     }
 
-    /* .relatorio1{
-        display: none;
-    } */
-
-    .relatorioReserva {
-        margin-top: -237px;
-        margin-left: 200px;
+    .modal1 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: -50px;
     }
+
+    .modal1 img {
+        width: 150px;
+        height: 160px;
+        margin-top: -40px;
+    }
+
+
+    .conteudo-reserva {
+        height: 565px;
+        width: 40%;
+    }
+
+
+
+    .tituloModal {
+        margin-left: -10px;
+        gap: 60px;
+    }
+
+    .tituloModal h4 {
+        font-size: 30px;
+    }
+
+
+
+
+/*PAGINA CONTATO */
+
+.titulo-contato h3{
+text-align: center;
+/* background-color: #B06761; */
+color: black;
+margin-top: 120px;
+margin-bottom: -35px;
 }
 
-/* PAGINA RESERVA PARA DESKTOP TELA MAIOR */
-
-.conteudo-reserva {
-    margin-top: 10%;
-    margin-bottom: 10%;
-    width: 47%;
 }
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+/*cards da pagina cardapio para notebook */
 
 @media screen and (min-width:1024PX) {
 
@@ -1159,9 +1435,6 @@ button a {
         gap: 2PX;
     }
 }
-
-
-
 
 
 /*CARDS DA PAGINA CARDAPIO  NOTEBOOK */
@@ -1177,6 +1450,8 @@ button a {
 
 
 
+
+
 /*CARDS DA PAGINA CARDAPIO  DESKTOP TELA MAIOR */
 @media screen and (min-width:1910PX) {
 
@@ -1186,7 +1461,6 @@ button a {
         gap: 80px;
     }
 }
-
 
 @media screen and (min-width:2550PX) {
 

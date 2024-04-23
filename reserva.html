@@ -20,7 +20,8 @@
 </head>
 
 
-<body>
+<body class="body-reserva">
+
     <header id="topo">
         <div>
             <h1>
@@ -54,95 +55,109 @@
 
             <form id="form-reserva" method="post">
 
-
-                <!-- <label for="nome">Nome:</label> -->
-
                 <p>Nome</p>
                 <input tabindex="1" type="text" id="nomeReserva" name="nomeReserva">
 
-
-                <!-- <label for="telefone">Whatsapp:</label> -->
                 <p>Whatsapp</p>
                 <input tabindex="2" type="text" id="telefoneReserva" name="telefoneReserva">
 
 
-                <!-- <label for="reserva">Tipo de reserva:</label> -->
                 <p>Tipo de Reserva:</p>
                 <select name="reserva" id="reserva">
                     <option value=""></option>
                     <option value="Salão Principal">Salão Principal</option>
-                    <option value="">Area Externa (churrasqueira)</option>
-                    <option value="">Evento (mais de 30 pessoa)</option>
+                    <option value="Area Externa">Area Externa (churrasqueira)</option>
+                    <option value="Evento">Evento (mais de 30 pessoa)</option>
                 </select>
 
-
-                <!-- <label for="quantidade">Quantidade de pessoas:</label> -->
                 <p>Quantidade de Pessoas:</p>
                 <select type="number" name="quantidade" id="quantidade">
                     <option value=""></option>
-                    <option value="">1 pessoa</option>
+                    <option value="1">1 pessoa</option>
                     <option value="2">2 pessoas</option>
-                    <option value="">3 pessoas</option>
-                    <option value="">4 pessoas</option>
-                    <option value="">5 pessoas</option>
-                    <option value="">6 pessoas</option>
-                    <option value="">7 pessoas</option>
-                    <option value="">8 pessoas</option>
-                    <option value="">9 pessoas</option>
-                    <option value="">10 pessoas</option>
+                    <option value="3">3 pessoas</option>
+                    <option value="4">4 pessoas</option>
+                    <option value="5">5 pessoas</option>
+                    <option value="6">6 pessoas</option>
+                    <option value="7">7 pessoas</option>
+                    <option value="8">8 pessoas</option>
+                    <option value="9">9 pessoas</option>
+                    <option value="10">10 pessoas</option>
                 </select>
 
-                <!-- <p> <label>Data:</label> -->
                 <p>Data</p>
                 <input type="date" id="dataReserva" name="dataReserva">
 
-                <!-- <label for="horario">Horario:</label> -->
-
+    
                 <p>Horario:</p>
                 <select type="times" name="horario" id="horarioReserva">
                     <option value=""></option>
-                    <option value="">16:00 horas</option>
+                    <option value="16:00 horas">16:00 horas</option>
                     <option value="17:00 horas">17:00 horas</option>
-                    <option value="">18:00 horas</option>
-                    <option value="">19:00 horas</option>
-                    <option value="">20:00 horas</option>
-                    <option value="">21:00 horas</option>
-                    <option value="">22:00 horas</option>
+                    <option value="18:00 horas">18:00 horas</option>
+                    <option value="19:00 horas">19:00 horas</option>
+                    <option value="20:00 horas">20:00 horas</option>
+                    <option value="21:00 horas">21:00 horas</option>
+                    <option value="22:00 horas">22:00 horas</option>
                 </select>
-                <div tabindex="11" id="reservar" name="enviar" onclick="enviar()"> Reservar</div>
-                <!-- <button tabindex="11" id="reservar" name="enviar" onclick="enviar()"> Reservar</button> -->
+                <div tabindex="11" id="reservar" name="enviar" onclick="enviarReserva()"> Reservar</div>
+
+
+                <!-- <button tabindex="11" id="reservar" name="enviar" onclick="enviarReserva()"> Reservar</button> -->
             </form>
+
+            <!-- Elemento de loading -->
+            <div id="loading" class="loading"></div>
+
+
 
         </div>
 
-        <div class="modal-relatorio">
-            <div>
-                <p class="relatorio1">Nome</p>
-                <p class="relatorio1">Whatsapp</p>
-                <p class="relatorio1">Tipo de Reserva:</p>
-                <p class="relatorio1">Quantidade de Pessoas:</p>
-                <p class="relatorio1">Data:</p>
-                <p class="relatorio1">Horario</p>
-                <p class="relatorio1">Status:</p>
-            </div>
-            <div>
-                <div class="relatorioReserva">
-                    <p id="reservaRelatorio"></p>
-                    <p id="telRelatorio"></p>
-                    <p id="tipoRelatorio"></p>
-                    <p id="quantRelatorio"></p>
-                    <p id="dataRelatorio"></p>
-                    <p id="horaRelatorio"></p>
-                    <p id="status">Reserva confirmada</p>
+
+        <!--MODAL RELATORIO DE RESERVA-->
+
+        <div id="modal-relatorio">
+            <span id="closeModal" class="material-symbols-outlined" onclick="fechaModal()">
+                close
+            </span>
+            <div class="modal1">
+                <div class="tituloModal">
+                    <h4>Reserva</h4>
+                    <img src="imagens/reserva-restaurante2-removebg-preview.png" alt="">
+                </div>
+                <div class="modal-geral">
+                    <div class="relatorioReserva1">
+                        <p class="relatorio1">Nome:</p>
+                        <p class="relatorio1">Whatsapp:</p>
+                        <p class="relatorio1">Tipo de Reserva:</p>
+                        <p class="relatorio1">Quantidade de Pessoas:</p>
+                        <p class="relatorio1">Data:</p>
+                        <p class="relatorio1">Horario:</p>
+                        <p class="relatorio1">Status:</p>
+                    </div>
+                    <div>
+                        <div class="relatorioReserva">
+                            <p id="reservaRelatorio"></p>
+                            <p id="telRelatorio"></p>
+                            <p id="tipoRelatorio"></p>
+                            <p id="quantRelatorio"></p>
+                            <p id="dataRelatorio"></p>
+                            <p id="horaRelatorio"></p>
+                            <p id="status">Reserva confirmada</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <!--MODAL-->
-        <!-- <div id="modal-container">
-            <span class="close-modal">&times;</span>
-            <p>Reserva efetuada com sucesso</p>
-        </div> -->
+
+        <!-- Modal de preencha todos os campos -->
+        <div id="modalPreenchaCampos" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="fecharModalPreenchaCampos()">&times;</span>
+                <p>Preencha todos os campos!</p>
+            </div>
+        </div>
 
     </div>
 
@@ -154,15 +169,15 @@
                 <a href="index.html"><img src="imagens/utopiaLogo-removebg-preview.png" alt="Logotipo"></a>
             </div>
 
-            <div>
+            <div  class="locali">
                 <h1>Localização</h1>
-                <p>Rua Tito... Vila Romana</p>
+                <p>Rua Tito - 31 - Vila Romana</p>
                 <p>São Paulo - SP</p>
-                <hr>
+
 
                 <h1>Redes Sociais</h1>
                 <p>@utopiaBar</p>
-                <hr>
+
             </div>
 
             <div class="contato">
@@ -173,12 +188,12 @@
             </div>
 
             <div class="funcionamento">
-                <hr>
+
                 <h1>Horário de Funcionamento</h1>
                 <p>Segunda a sexta: 12:00 as 22:00 horas</p>
                 <p>Sabado: 11:00 as 00:00 horas</p>
                 <p>Domingo 12:00 as 23:00 horas</p>
-                <hr>
+
             </div>
         </div>
 

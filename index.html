@@ -14,6 +14,9 @@
 
     <!--Buscando o css externo-->
     <link rel="stylesheet" href="css/estilo.css">
+
+
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
@@ -22,7 +25,7 @@
 
     <!--Carrosel-->
 
-<body onLoad="slide1()">
+<!-- <body onLoad="slide1()"> -->
     </head>
 
     <body>
@@ -42,7 +45,6 @@
                     close
                 </span>
                 <a href="index.html" tabindex="1">Home</a>
-                <!--tabindex é utilizado para a acessibilidade-->
                 <a href="cardapio.html" tabindex="2">Cardapio</a>
                 <a href="reserva.html" tabindex="3">Reserva</a>
                 <a href="contato.html" tabindex="4">Contato</a>
@@ -53,11 +55,18 @@
 
         <main class="conteudo">
 
-            <!-- Carrossel -->
-            <div id="carrosel">
-                <img id="img1Carrosel" src="imagens/utopia6.jpeg">
+            <!-- Slide -->
+            <div id="imgContainer" class="carousel-container">
+                <img id="img1" src="imagens/utopia2.jpeg" class="carousel-img">
+                <img id="img2" src="imagens/utopia6.jpeg" class="carousel-img hidden">
+                <img id="img3" src="imagens/utopia1.jpeg" class="carousel-img hidden">
+                <img id="img4" src="imagens/utopia-noite.jpg" class="carousel-img hidden">
+                <img id="img5" src="imagens/group-cocktail-shot.jpg" class="carousel-img hidden">
+                <img id="img6" src="imagens/utopia3.jpeg" class="carousel-img hidden">
+                <img id="img7" src="imagens/utopia4.jpeg" class="carousel-img hidden">
             </div>
-
+            
+            
 
             <br>
             <div class="bemVindoGeral">
@@ -106,10 +115,8 @@
                                 <img src="imagens/cozinheiross.jpg">
                                 <br>
                                 <div class="texto1">
-                                    <p>Ambiente acolhedor e sem frescuras, garçons simpáticos que te chamam pelo nome,
-                                        sabem
-                                        seu
-                                        pedido de cor e não deixam faltar chopp em sua mesa. Bar de verdade. </p>
+                                    <p>Pratos deliciosos, alimentos selecionados com sabor único, que certamente será
+                                        inesquecivel, literalmente de "dar agua na boca para o seu paladar..." </p>
                                 </div>
                             </div>
                         </div>
@@ -117,22 +124,6 @@
                     </div>
 
 
-                    <!-- <div class="galeria">
-                    <img src="imagens/utopia6.jpeg" id="imagemGaleria1">
-
-                    <img src="imagens/utopia2.jpeg" id="imagemGaleria2">
-
-                    <img src="imagens/utopia3.jpeg" alt="" id="imagemGaleria3">
-
-                    <img src="imagens/utopia4.jpeg" alt="" id="imagemGaleria4">
-
-                    <img src="imagens/utopia5.jpeg" alt="" id="imagemGaleria5">
-
-                    <img src="imagens/utopia1.jpeg" alt="" id="imagemGaleria6">
-
-
-
-                </div> -->
                 </div>
             </div>
 
@@ -158,37 +149,57 @@
                     <img src="imagens/utopia1.jpeg" alt="">
                 </a>
 
-                <a data-title="Salão" href="imagens/bar-bonito2-copia.jpg">
-                    <img src="imagens/bar-bonito2-copia.jpg" alt="">
+            
+                <a data-title="" href="imagens/utopia13.jpg">
+                    <img src="imagens/utopia13.jpg" alt="">
                 </a>
 
-                <a data-title="Salão" href="imagens/cozinha-restaurante.jpg">
-                    <img src="imagens/cozinha-restaurante.jpg" alt="">
+                <a data-title="" href="imagens/utopia14.jpg">
+                    <img src="imagens/utopia14.jpg" alt="">
                 </a>
 
+                <a data-title="Frente do Utopia de dia" href="imagens/utopia15.jpg">
+                    <img src="imagens/utopia15.jpg" alt="">
+                </a>
+
+                <a data-title="Salão" href="imagens/utopia-salao.jpeg">
+                    <img src="imagens/utopia-salao.jpeg" alt="">
+                </a>
+
+                <a data-title="Frente do Utopia noturna" href="imagens/utopia-noite.jpg">
+                    <img src="imagens/utopia-noite.jpg" alt="">
+                </a>
+
+                <a data-title="" href="imagens/utopia-salao2.jpg">
+                    <img src="imagens/utopia-salao2.jpg" alt="">
+                </a>
+
+                <a data-title="" href="imagens/utopia-salao3.jpg">
+                    <img src="imagens/utopia-salao3.jpg" alt="">
+                </a>
+
+                <a data-title="" href="imagens/utopia-externa1.jpg">
+                    <img src="imagens/utopia-externa1.jpg" alt="">
+                </a>
+
+                <a data-title="" href="imagens/utopia-frenteeee.jpg">
+                    <img src="imagens/utopia-frenteeee.jpg" alt="">
+                </a>
 
             </figure>
-
-
-
-
-
 
 
             <div class="vejaCardapio">
                 <h1>Conheça nosso cardapio</h1>
 
-                <p>A combinação perfeite entre ambiente agradavel e gastronomia saborosa !</p>
+                <p>A combinação perfeita entre ambiente agradavel e gastronomia saborosa !</p>
 
                 <button><a href="cardapio.html"> Veja Nosso Cardapio</a></button>
-
-                <!-- <img src="imagens/anime-cardapio-index.avif" alt=""> -->
-
 
                 <div class="slider">
                     <div class="slides">
                         <div class="slide">
-                            <img src="imagens/costela-2.jpg" alt="">
+                            <img src="imagens/coxinha-utopia.jpg" alt="">
                         </div>
 
                         <div class="slide">
@@ -220,15 +231,15 @@
                     <a href="index.html"><img src="imagens/utopiaLogo-removebg-preview.png" alt="Logotipo"></a>
                 </div>
 
-                <div>
+                <div  class="locali">
                     <h1>Localização</h1>
-                    <p>Rua Tito... Vila Romana</p>
+                    <p>Rua Tito - 31 - Vila Romana</p>
                     <p>São Paulo - SP</p>
-                    <hr>
+
 
                     <h1>Redes Sociais</h1>
                     <p>@utopiaBar</p>
-                    <hr>
+
                 </div>
 
                 <div class="contato">
@@ -239,12 +250,12 @@
                 </div>
 
                 <div class="funcionamento">
-                    <hr>
+
                     <h1>Horário de Funcionamento</h1>
                     <p>Segunda a sexta: 12:00 as 22:00 horas</p>
                     <p>Sabado: 11:00 as 00:00 horas</p>
                     <p>Domingo 12:00 as 23:00 horas</p>
-                    <hr>
+
                 </div>
             </div>
 
@@ -256,17 +267,10 @@
         </div>
 
         <script src="js/acoes.js"></script>
-
         <script src="js/jquery.min.js"></script>
+        <script src="js/galeria.js"></script>
         <script src="js/lightbox.min.js"></script>
 
-
-
-        <script>
-            $(function () {
-                $('.galeria a').attr('data-lightbox', 'galeria');
-            });  
-        </script>
 
     </body>
 
