@@ -192,16 +192,13 @@ nav a:focus,
 
 
 .footerColum {
-    /* width: 30%; */
     margin: 1%;
 
 }
 
-hr {
-    display: block;
-}
 
-/*Regras Para o Index (Conteudo)*/
+/*Regras Para o Index (Conteudo da pagina Home)*/
+
 .frase {
     background: linear-gradient(to left, #b7281bd5, rgb(233, 189, 189));
     color: white;
@@ -210,7 +207,7 @@ hr {
     font-style: normal;
     font-size: 11px;
     font-family: 'Alegreya SC';
-    
+
 }
 
 /*---------------------------CARROSEL / SLIDER  da pagina home--------------------------*/
@@ -228,6 +225,7 @@ hr {
     top: 0;
     left: 0;
     transition: opacity 5s ease-in-out;
+    object-fit: cover;
 }
 
 .hidden {
@@ -259,10 +257,8 @@ hr {
 
 /*--------------------TEXTO DE BEM VINDO DA PAGINA HOME---------------*/
 .bem-vindo {
-
     text-align: center;
-
-
+    background-color: aliceblue;
 }
 
 .text-Sejabemvindo {
@@ -271,10 +267,8 @@ hr {
 
 .bem-vindo img {
     height: 260px;
-    width: 380px;
-    margin-bottom: -25px;
-
-
+    width: 95%;
+    border-radius: 15px;
 }
 
 .bemVindoGeral {
@@ -288,14 +282,14 @@ hr {
 }
 
 .bem-vindo h2 {
-    font-family: "Oswald", sans-serif;
+    font-family: 'Alegreya SC';
     font-optical-sizing: auto;
     font-weight: 600;
     font-style: normal;
-    margin-top: 35px;
-    font-size: 18px;
-    text-transform: uppercase;
+    font-size: 16px;
+    /* text-transform: uppercase; */
     margin-top: -3%;
+    margin-bottom: 2%;
 }
 
 
@@ -312,25 +306,24 @@ hr {
     /* margin-left: 92px; */
 }
 
+.apresentacao{
+    object-fit: cover;
+}
+
 .galeria {
     display: flex;
-    gap: 5px;
+    gap: 10px;
     justify-content: center;
     flex-wrap: wrap;
-    margin-bottom: 50px;
+    margin: 0px;
 
 }
 
 .galeria img {
-    width: 115px;
-    height: 120px;
+    width: 76px;
+    height: 76px;
 }
 
-
-
-.Cozinha img {
-    padding-bottom: 13px;
-}
 
 
 
@@ -375,38 +368,25 @@ button a {
 
 
 /*REGRAS PARA CARDAPIO (PAGINA CARDAPIO)*/
-/* .menu-cardapios {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-} */
-/* 
-.menu-cardapios h3 {
-    color: black;
-    margin: 10px;
+
+
+
+.menu-cardap {
     text-align: center;
-    background: linear-gradient(to right, #f4d6d6, #f59a9a);
-    border-radius: 5px;
-    padding: 10px;
-    box-shadow: grey 1px 1px 6px;
-} */
-
-
-.menu-cardap{
-text-align: center;
     background-color: black;
     color: white;
     text-transform: uppercase;
     padding: 2px;
-    
-    
+
+
 }
-.menu-cardap a{
+
+.menu-cardap a {
     text-decoration: none;
     color: white;
 }
 
-.menu-cardap hr{
+.menu-cardap hr {
     width: 100%;
 }
 
@@ -463,6 +443,10 @@ text-align: center;
     max-width: 150px;
 }
 
+
+
+
+
 /*PAGINA CONTATO*/
 #form-contato {
     margin: auto;
@@ -476,8 +460,10 @@ text-align: center;
 
 #form-contato input,
 #form-contato textarea
-/* #form-contato select */ { 
-    border: solid 1px black;
+
+/* #form-contato select */
+    {
+    border: solid 0 black;
     width: 100%;
     margin: 4px auto;
 }
@@ -504,11 +490,14 @@ text-align: center;
 
 
 .conteudo-contato {
-    margin: 5%;
+    margin: 50px auto;
     text-align: center;
-    background-color: #f0e1df;
+    background-color: #812b24e6;
+    color: white;
     border-radius: 15px;
     padding: 2%;
+    width: 35vh;
+    font-family: 'Open Sans';
 }
 
 
@@ -521,34 +510,34 @@ text-align: center;
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgba(0,0,0,0.5);
-  }
-  
-  .modal-content {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
     background-color: #fefefe;
     margin: 15% auto;
     padding: 20px;
     border: 1px solid #888;
     width: 80%;
-  }
-  
-  .close {
+}
+
+.close {
     color: #aaa;
     float: right;
     font-size: 28px;
     font-weight: bold;
-  }
-  
-  .close:hover,
-  .close:focus {
+}
+
+.close:hover,
+.close:focus {
     color: black;
     text-decoration: none;
     cursor: pointer;
-  }
+}
 
-  #enviarContato{
+#enviarContato {
     background-color: #812b24;
-    width: 116px;
+    width: 0px auto;
     padding: 15px;
     border-radius: 10px;
     text-align: center;
@@ -557,8 +546,10 @@ text-align: center;
     justify-content: center;
     color: white;
     cursor: pointer;
-    
-  }  
+
+}
+
+
 
 
 
@@ -615,7 +606,7 @@ text-align: center;
     cursor: pointer;
 }
 
-#reservar:hover{
+#reservar:hover {
     background-color: #B06761;
     color: white;
 }
@@ -631,20 +622,27 @@ text-align: center;
     width: 50px;
     height: 50px;
     animation: spin 1s linear infinite;
-    z-index: 9999; /* Certifique-se de que o loading está acima de outros elementos */
-    display: none; /* Inicialmente oculto */
-  }
-  
-  /* Animação de rotação */
-  @keyframes spin {
-    0% { transform: translate(-50%, -50%) rotate(0deg); }
-    100% { transform: translate(-50%, -50%) rotate(360deg); }
-  }
-  
+    z-index: 9999;
+    /*  loading está acima de outros elementos */
+    display: none;
+    /* Inicialmente oculto */
+}
+
+/* Animação de rotação */
+@keyframes spin {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
 
 
 
-  /*Modal da pagina reserva */
+
+/*Modal da pagina reserva */
 
 #closeModal {
     margin-left: 90%;
@@ -669,7 +667,7 @@ text-align: center;
     /* margin-top: 50px; */
     margin-left: 5px;
     gap: 41px;
-    
+
 }
 
 
@@ -725,33 +723,36 @@ text-align: center;
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgba(0,0,0,0.5);
-  }
-  
-  /* Modal preencha todos os campos */
-  .modal-content {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Modal preencha todos os campos */
+.modal-content {
     background-color: #fefefe;
     margin: 15% auto;
     padding: 20px;
     border: 1px solid #888;
     width: 60%;
-  }
-  
-  /* Estilos para o botão de fechar */
-  .close {
+}
+
+/* Estilos para o botão de fechar */
+.close {
     color: #aaa;
     float: right;
     font-size: 28px;
     font-weight: bold;
-  }
-  
-  .close:hover,
-  .close:focus {
+}
+
+.close:hover,
+.close:focus {
     color: black;
     text-decoration: none;
     cursor: pointer;
-  }
-  
+}
+
+
+
+
 
 
 /*Pagina trabalhe conosco*/
@@ -802,6 +803,11 @@ text-align: center;
     padding: 2%;
     border-radius: 5px;
 }
+
+
+
+
+
 
 
 /* começando a parte responsiva da pagina Index TABLET */
@@ -861,7 +867,11 @@ text-align: center;
         width: 100%;
         height: 80px;
     }
-    
+
+    #topo div{
+        height: 1px;
+    }
+
 
     #itens {
         display: block;
@@ -887,7 +897,10 @@ text-align: center;
     }
 
 
-    /* MAIN PARA TABLET */
+
+
+
+    /* MAIN DA INDEX PARA TABLET */
 
     #img1Carrosel {
         height: 400px;
@@ -903,7 +916,7 @@ text-align: center;
         margin-top: 81px;
     }
 
-    .bemVindoGeral{
+    .bemVindoGeral {
         margin-top: 422px;
     }
 
@@ -928,7 +941,7 @@ text-align: center;
 
     .bem-vindo h2 {
 
-        font-family: "Oswald", sans-serif;
+        
         font-optical-sizing: auto;
         font-weight: 600;
         font-style: normal;
@@ -963,6 +976,7 @@ text-align: center;
         align-items: center;
     }
 
+
     .card-bemvindo p {
 
         text-align: center;
@@ -981,7 +995,7 @@ text-align: center;
         margin-bottom: 45px;
     }
 
-    
+
 
 
 
@@ -990,7 +1004,7 @@ text-align: center;
         /* gap: 36px; */
         justify-content: center;
         flex-wrap: wrap;
-        /* margin-top: -70px; */
+         margin-top: 100px; 
     }
 
 
@@ -1010,36 +1024,32 @@ text-align: center;
         font-style: italic;
     }
 
-    /* FOOTER */
 
-    hr {
-        display: none;
-    }
+
+
 
 
     /*PAGINA CARDAPIO TABLET */
 
-    /* .menu-cardapios {
-        margin-top: 90px;
-    } */
 
-    .menu-cardap{
-      
+    .menu-cardap {
+
         display: flex;
-        margin-top: 126px;
+        margin-top: 82px;
         height: 50px;
-    }
-
-    .menu-cardap a{
-
-        margin: auto;
-    margin-bottom: 0px;
-    margin-top: 18px;
-    font-size: 13px;
         
     }
 
-    .menu-cardap hr{
+    .menu-cardap a {
+
+        margin: auto;
+        margin-bottom: 0px;
+        margin-top: 18px;
+        font-size: 13px;
+
+    }
+
+    .menu-cardap hr {
         display: none;
     }
 
@@ -1056,7 +1066,7 @@ text-align: center;
 
     }
 
-    .conteudo-cardapio h3{
+    .conteudo-cardapio h3 {
         margin-top: 0px;
     }
 
@@ -1084,10 +1094,7 @@ text-align: center;
         width: 45%;
     }
 
-    .modal-geral {
-        /* margin-left: 80px;
-        gap: 35px; */
-    }
+
 
     .tituloModal {
         gap: 110px;
@@ -1114,7 +1121,7 @@ text-align: center;
 
     /*pagina contato */
 
-    .titulo-contato h3{
+    .titulo-contato h3 {
         margin-top: 115px;
     }
 }
@@ -1177,11 +1184,11 @@ text-align: center;
         gap: 30px;
     }
 
-    .rodape p{
+    .rodape p {
         font-size: 15px;
     }
 
-    .locali{
+    .locali {
         width: 189px;
     }
 
@@ -1192,7 +1199,7 @@ text-align: center;
 
 
 
-    /* MAIN PARA DESKTOP */
+    /* MAIN DA PAGINA INDEX PARA DESKTOP */
 
     .bemVindoGeral {
         margin-top: 395px;
@@ -1264,28 +1271,12 @@ text-align: center;
         height: 680px;
     }
 
-    /* #carrosel {
-        margin-top: 42px;
-        margin-left: 0px;
-        height: 517px;
-        text-align: center;
-        width: 100%;
-        background: linear-gradient(to top, #f4b7b1, #f0e1df);
-    }
 
-    #carrosel img {
-        width: 100%;
-        height: 860px;
-        margin-top: 40px;
-
-    } */
-
-
-    .carousel-img{
+    .carousel-img {
         height: 800px;
     }
 
-    .bemVindoGeral{
+    .bemVindoGeral {
         margin-top: 810px;
     }
 
@@ -1293,6 +1284,8 @@ text-align: center;
         margin-top: -27px;
         font-size: 30px;
     }
+
+
 
 
     /*PAGINA CARDAPIO PARA DESKTOP*/
@@ -1349,10 +1342,13 @@ text-align: center;
 
 
 
+
+
     /* PAGINA RESERVA PARA DESKTOP */
 
 
-    #form-reserva input , #form-reserva select{
+    #form-reserva input,
+    #form-reserva select {
         width: 65%;
     }
 
@@ -1373,7 +1369,7 @@ text-align: center;
         margin-top: 75px;
         margin-left: 0%;
         width: 460px;
-        
+
     }
 
     .modal1 {
@@ -1409,17 +1405,21 @@ text-align: center;
 
 
 
-/*PAGINA CONTATO */
+    /*PAGINA CONTATO */
 
-.titulo-contato h3{
-text-align: center;
-/* background-color: #B06761; */
-color: black;
-margin-top: 120px;
-margin-bottom: -35px;
+    .titulo-contato h3 {
+        text-align: center;
+        /* background-color: #B06761; */
+        color: black;
+        margin-top: 120px;
+        margin-bottom: -35px;
+    }
+
 }
 
-}
+
+
+
 
 
 
